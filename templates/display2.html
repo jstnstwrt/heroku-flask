@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="row">
+	<div class="col-md-12">
+
+		{% print acme_basics.username%} <br>
+		{% print knowlita_basics.username  %} <br>
+		<hr>
+
+
+		<h3> Valid Participants </h3>
+		<p>
+			<!-- {% print acme_comments[1]  %} -->
+			{% for f in acme_comments %}
+				{{loop.index}}
+				{% print f %} <br>
+			{% endfor %}
+		</p>
+		<hr>
+
+		<h3> Winners</h3>
+		<p>
+			<!-- {% print acme_comments[1]  %} -->
+			{% print '1st place' %} {% print acme_comments[winners[0]] %} <br>
+			{% print '2nd place' %} {% print acme_comments[winners[1]] %} <br>
+			{% print '3rd place' %} {% print acme_comments[winners[2]] %} <br>
+			
+		</p>
+		<hr>
+
+
+
+		<h3> Likes </h3>
+		<p>
+			{% for f in acme_likes %}
+				{{loop.index}}
+				{% print f %} <br>
+			{% endfor %}
+		</p>
+		<hr>
+
+
+		<h3> Followers </h3>
+		<p>
+			<!-- {% print next %} <br> -->
+			<!-- {% for f in acme_users %}
+				{{loop.index}}
+				{% print f  %} <br>
+			{% endfor %} -->
+			{% print acme_basics.counts['followed_by']  %}
+		</p>
+
+	</div>
+	
+
+</div>
+
+{% endblock %}

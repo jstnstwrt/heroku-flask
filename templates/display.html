@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="row">
+	<div class="col-md-12">
+
+		
+		{% if size == 'big'%}
+		<a href="/">View thumbnails</a>
+		{% else %} 
+		<a href="/?size=big">View large photos</a>
+		{% endif %}
+
+	<!-- 	<hr>
+		{% print basics.username  %}
+		<hr>
+
+
+		<h3> Comments </h3>
+		<p>
+			{% for f in acme_comments %}
+				{{loop.index}}
+				{% print f.username , f.text  %} <br>
+			{% endfor %}
+		</p>
+		<hr>
+
+		<h3> Likes </h3>
+		<p>
+			{% for f in acme_likes %}
+				{{loop.index}}
+				{% print f.username  %} <br>
+			{% endfor %}
+		</p>
+		<hr>
+
+
+		<h3> Followers </h3>
+		<p>
+			{% print next %} <br>
+			{% for f in users %}
+				{{loop.index}}
+				{% print f  %} <br>
+			{% endfor %}
+			{% print basics %}
+		</p>
+ -->
+			
+
+			<!-- {% for f in follows %}
+				{% print f.username, f.id  %} <br>
+			{% endfor %} -->
+			<!-- {% for p in photos %}
+				{% print p  %} <br>
+			{% endfor %} -->
+
+		
+
+
+		<!-- {% for p in media %}
+			
+			{% if size == 'big'%}
+			<p>
+				<img src="{{p.images['standard_resolution'].url}}" alt="{{p.caption.text}}">
+				<br>
+				{{p.id}}
+				<br>
+				<small><a href="{{p.link}}">view on instagram</a></small>
+			</p>
+
+			{% else %}
+				{% print p.images['standard_resolution'].url %}
+				<br>
+				{% print p.id %}
+				<br>
+				<div class="col-sm-6 col-md-2">
+					<a href="{{p.link}}" class="thumbnail">
+						<img src="{{p.images['thumbnail'].url}}" alt="{{p.caption.text}}">
+					</a>
+				</div>
+			{% endif %}
+
+		{% endfor %} -->
+	</div>
+	
+
+</div>
+
+{% endblock %}

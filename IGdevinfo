@@ -1,0 +1,4 @@
+CLIENT_ID	12e2f32ec22a41a5b68dac166dd2fc0c
+CLIENT_SECRET	dcb5b1ddbbed4de0940e052a9566d696
+WEBSITE URL	http://localhost:5000/instagram_callback
+REDIRECT URI	http://localhost:5000/instagram_callback

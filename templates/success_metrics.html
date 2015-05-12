@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="row">
+	<div class="col-md-12">
+		
+		<h1> results </h1>
+		Here is a list of your contest results
+		<h3> valid participants </h3>
+		total num of participants : {{ num_valid_participants }} <br>
+		{% for p in valid_participants %}
+			{{ p }} <br>
+		{% endfor %}
+		<hr>
+		<h3> ntp </h3>
+		total num of not tagged participants : {{ num_untagged_participants }} <br>
+		{% for p in ntp %}
+			{{ p }} <br>
+		{% endfor %}
+		<hr>
+		<h3> tp </h3>
+		total num of tagged participants : {{ num_tagged_participants }} <br>
+		{% for p in tp %}
+			{{ p }} <br>
+		{% endfor %}
+		
+
+
+		<h3>  contest engagement </h3>
+		{{ contest_engagement }}
+
+		<hr>
+
+		<h3>  contest virality coeficient </h3>
+		{{ virality_coef }}
+
+		
+		<hr>
+		
+
+	</div>
+</div>
+
+{% endblock %}
